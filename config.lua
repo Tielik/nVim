@@ -4,10 +4,24 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 -- Vim config
---vim.cmd()
-vim.cmd('source Mylunaline.lua')
+-- if win to zakryj
+vim.cmd('source ~/.config/lvim/Mylunaline.lua')
+lvim.builtin.alpha.dashboard.section.header.val = {
+
+" ▄▄▄       ██▀███   ▄████▄   ██░ ██  ██▒   █▓ ██▓ ███▄ ▄███▓",
+"▒████▄    ▓██ ▒ ██▒▒██▀ ▀█  ▓██░ ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒",
+"▒██  ▀█▄  ▓██ ░▄█ ▒▒▓█    ▄ ▒██▀▀██░ ▓██  █▒░▒██▒▓██    ▓██░",
+"░██▄▄▄▄██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒░▓█ ░██   ▒██ █░░░██░▒██    ▒██ ",
+" ▓█   ▓██▒░██▓ ▒██▒▒ ▓███▀ ░░▓█▒░██▓   ▒▀█░  ░██░▒██▒   ░██▒",
+" ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ░▒ ▒  ░ ▒ ░░▒░▒   ░ ▐░  ░▓  ░ ▒░   ░  ░",
+"  ▒   ▒▒ ░  ░▒ ░ ▒░  ░  ▒    ▒ ░▒░ ░   ░ ░░   ▒ ░░  ░      ░",
+"  ░   ▒     ░░   ░ ░         ░  ░░ ░     ░░   ▒ ░░      ░   ",
+"      ░  ░   ░     ░ ░       ░  ░  ░      ░   ░         ░   ",
+"                   ░                     ░                  ",
+}
 --
 --
+lvim.colorscheme = "dracula"
 vim.o.scrolloff=99999
 vim.opt.relativenumber = true
 lvim.plugins={
@@ -28,8 +42,18 @@ lvim.plugins={
                 desc = 'Create a selection for selected text or word under the cursor',
             },
         },
-}
+},
+{ 'wakatime/vim-wakatime', lazy = false },
+  -- add dracula
+  { "Mofiqul/dracula.nvim" },
 
+  -- Configure LazyVim to load dracula
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "dracula",
+    },
+  },
 
 
 
